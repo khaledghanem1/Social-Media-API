@@ -2,7 +2,7 @@ const router = require('express').Router();
 /* TODO: Set up thought routes after controller */
 const {
 
-} = require('../../controllers/userController');
+} = require('../../controllers/user-controller');
 
 // /api/users
 //router.route('/').get(getUsers).post(createUser);
