@@ -1,13 +1,31 @@
 const router = require('express').Router();
-/* TODO: Set up thought routes after controller */
+
+// Thoughts & reactions destructuring
 const {
+  getThoughts,
+  getSingleThought,
+  createThought,
+  updateThought,
+  deleteThought,
+  createReaction,
+  deleteReaction
+} = require('../../controllers/thought-controller');
 
-} = require('../../controllers/user-controller');
 
-// /api/users
-//router.route('/').get(getUsers).post(createUser);
+// /api/thoughts
+router.route('/').get(getThoughts).post(createThought);
 
-// /api/users/:userId
-//router.route('/:userId').get(getSingleUser);
+// /api/thoughts/:thoughtId
+router
+  .route('/:thoughtId')
+  .get(getSingleThought)
+  .put(updateThought)
+  .delete(deleteThought);
+
+// /api/reactions
+router.route('/').post(createReaction);
+
+// /api/reactions/:reactionId
+router.route('/:reactionId').delete(deleteReaction);
 
 module.exports = router;
