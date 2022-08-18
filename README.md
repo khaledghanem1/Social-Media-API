@@ -1,5 +1,9 @@
 # Social-Media-API
 
+
+https://user-images.githubusercontent.com/88470834/185284038-c376094d-d329-4d26-80ce-66b645fbc6bd.mp4
+
+
 ### User Story
 AS A social media startup
 I WANT an API for my social network that uses a NoSQL database
