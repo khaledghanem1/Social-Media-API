@@ -18,13 +18,13 @@ const userSchema = new Schema(
     thoughts: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'Thought',
+            ref: 'thought',
         }
     ],
     friends: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'User',
+            ref: 'user',
         }
     ]
   },
@@ -38,7 +38,7 @@ const userSchema = new Schema(
   }
 );
 
-// Create a virtual property `fullName` that gets and sets the user's full name
+// Create a virtual property `friendCount` that gets and sets the user's full name
 userSchema
   .virtual('friendCount')
   // Getter
